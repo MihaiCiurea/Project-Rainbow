@@ -1,0 +1,179 @@
+/* * {
+    box-sizing: border-box
+} */
+
+body {
+    margin: auto;
+    display: flex;
+}
+
+.rainbow {
+    height: 100vh;
+    width: 240vh;
+    position: relative;
+    overflow: hidden;
+
+    background: lightblue;
+}
+
+.rainbow:before {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 45%;
+    border-radius: 50%;
+    left: 25%;
+    top: 50%;
+    box-shadow:  0 0 0 2vw purple, 0 0 0 4vw blue, 0 0 0 6vw lightblue,
+    0 0 0 8vw green, 0 0 0 10vw yellow, 0 0 0 12vw orange, 0 0 0 14vw red,
+    0 0 0 16vw pink;;
+}
+
+.cloud {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 10px;
+    left: 80%;
+
+}
+
+.cloud .circle {
+    background: rgb(97, 187, 240);
+    width: 170px;
+    height: 155px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.cloud .circle:nth-child(2) {
+    background: rgb(97, 187, 240);
+    width: 120px;
+    height: 100px;
+    top: 55px;
+    left: -60px;
+}
+
+.cloud .circle:nth-child(3) {
+    background: rgb(97, 187, 240);
+    width: 150px;
+    height: 130px;
+    top: 25px;
+    left: 130px;
+}
+
+.bar {
+    width: 200px;
+    height: 45px;
+    position: absolute;
+    background: rgb(97, 187, 240);
+    top: 110px;
+}
+.container {
+    position: relative;
+    display: inline-flex;
+    height: 610px;
+    border-bottom: 2px solid grey;
+}
+.rain-body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.rain-item {
+    position: relative;
+    width: 7px;
+    height: 14px;
+    background-color: rgb(153, 135, 135);
+    border-radius: 100px;
+    animation: drop 5s linear infinite;
+    transform-origin: bottom;
+}
+@keyframes drop {
+    0% {
+        transform: translateY(150px) scale(0.5);
+    }
+    70% {
+        transform: translateY(600px) scale(0.75);
+    }
+    100% {
+        transform: translateY(600px) scale(0);
+    }
+}
+.rain-item:nth-child(1) {
+    animation-duration: 1.25s;
+}
+.rain-item:nth-child(2) {
+    animation-duration: 1s;
+}
+.rain-item:nth-child(3) {
+    animation-duration: 1.35s;
+}
+.rain-item:nth-child(4) {
+    animation-duration: 1.45s;
+}
+.rain-item:nth-child(5) {
+    animation-duration: 1.20s;
+}
+.rain-item:nth-child(6) {
+    animation-duration: 1.15s;
+}
+.rain-item:nth-child(7) {
+    animation-duration: 1.27s;
+}
+.rain-item:nth-child(8) {
+    animation-duration: 1.36s;
+}
+.rain-item:nth-child(9) {
+    animation-duration: 1.14s;
+}
+.rain-item:nth-child(10) {
+    animation-duration: 1.25s;
+}
+.rain-item:nth-child(11) {
+    animation-duration: 0.25s;
+}
+.rain-item:nth-child(12) {
+    animation-duration: 1.85s;
+}
+.rain-item:nth-child(13) {
+    animation-duration: 1.75s;
+}
+.rain-item:nth-child(14) {
+    animation-duration: 1.25s;
+}
+.rain-item:nth-child(15) {
+    animation-duration: 0.75s;
+}
+.rain-item:nth-child(16) {
+    animation-duration: 0.25s;
+}
+.rain-item:nth-child(17) {
+    animation-duration: 1s;
+}
+.rain-item:nth-child(18) {
+    animation-duration: 1.10s;
+}
+
+.sun{
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: yellow;
+    opacity: 0.9;
+    box-shadow: 0px 0px 0px 20px yellow,0px 0px 0px 30px rgb(189, 189, 25),0px 0px 0px 40px rgb(175, 175, 12),0px 0px 0px 50px rgb(187, 187, 11),0px 0px 20px 60px rgb(175, 175, 12);
+    animation: sunrise 2s infinite linear forwards, rays 2s 2s infinite linear;
+}
+@keyframes sunrise {
+    0% {
+        box-shadow: none;
+}
+}
+
